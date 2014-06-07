@@ -11,6 +11,6 @@
         <releaseNotes>v1.0.0 - Added CueTextBox that shows a cue when empty</releaseNotes>
     </metadata>
     <files>
-        <file src="wControls.WPF\bin\Release\wControls.WPF.dll" target="lib\net45\wControls.WPF.dll" />
+        <file src="\bin\Release\wControls.WPF.dll" target="lib\net45\wControls.WPF.dll" />
     </files>
 </package>
