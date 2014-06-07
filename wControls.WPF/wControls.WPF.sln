@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wControls.WPF", "wControls.WPF\wControls.WPF.csproj", "{703F5A37-F691-4812-B563-3137CE75FFF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wControls.WPF.Test", "wControls.WPF.Test\wControls.WPF.Test.csproj", "{A1639CAE-29D7-4AD6-B7D5-BE0CB2BD2393}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wControls.WPF.UnitTests", "wControls.WPF.UnitTests\wControls.WPF.UnitTests.csproj", "{DD0877EC-B3C1-48F7-8EA9-E0C15950BF1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{703F5A37-F691-4812-B563-3137CE75FFF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703F5A37-F691-4812-B563-3137CE75FFF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703F5A37-F691-4812-B563-3137CE75FFF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703F5A37-F691-4812-B563-3137CE75FFF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1639CAE-29D7-4AD6-B7D5-BE0CB2BD2393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1639CAE-29D7-4AD6-B7D5-BE0CB2BD2393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1639CAE-29D7-4AD6-B7D5-BE0CB2BD2393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1639CAE-29D7-4AD6-B7D5-BE0CB2BD2393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0877EC-B3C1-48F7-8EA9-E0C15950BF1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0877EC-B3C1-48F7-8EA9-E0C15950BF1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0877EC-B3C1-48F7-8EA9-E0C15950BF1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0877EC-B3C1-48F7-8EA9-E0C15950BF1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

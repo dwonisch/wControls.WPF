@@ -1,0 +1,41 @@
+﻿<Window x:Class="wControls.WPF.Test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:Wpf="clr-namespace:wControls.WPF;assembly=wControls.WPF"
+        xmlns:Test="clr-namespace:wControls.WPF.Test"
+        Title="MainWindow" Height="350" Width="525" DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <Window.Resources>
+        <Style TargetType="{x:Type Label}">
+            <Setter Property="Width" Value="200"/>
+        </Style>
+    </Window.Resources>
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label>Scale:</Label>
+            <Slider Value="{Binding Scale}" Minimum="0.1" Maximum="4" Width="100"/>
+        </StackPanel>
+        <StackPanel>
+            <StackPanel.LayoutTransform>
+                <ScaleTransform ScaleX="{Binding Scale}" ScaleY="{Binding Scale}"/>
+            </StackPanel.LayoutTransform>
+            <StackPanel Orientation="Horizontal">
+                <Label>Default textbox look:</Label>
+                <TextBox>This is a sample text</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Normal textbox look:</Label>
+                <Wpf:CueTextBox>This is a sample text</Wpf:CueTextBox>
+                <TextBox>This is a sample text</TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Empty Textbox should show cue:</Label>
+                <Wpf:CueTextBox Cue="Enter text to let the cue disappear"></Wpf:CueTextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Disabled Textbox shouldn't show cue:</Label>
+                <Wpf:CueTextBox Cue="Enter text to let the cue disappear" IsEnabled="false"></Wpf:CueTextBox>
+                <TextBox IsEnabled="False">"Enter text to let the cue disappear</TextBox>
+            </StackPanel>
+        </StackPanel>
+    </StackPanel>
+</Window>
