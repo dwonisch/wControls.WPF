@@ -1,4 +1,8 @@
 ﻿namespace wControls.WPF.UnitTests {
+    using System.Threading;
+    using System.Windows;
+    using System.Windows.Controls;
+    using System.Windows.Input;
     using NUnit.Framework;
 
     [TestFixture, RequiresSTA]
@@ -34,5 +38,24 @@
             textbox.Text = null;
             Assert.That(textbox.IsCueVisible, Is.True);
         }
+
+        [Test]
+        public void CueIsNotVisibleWhenTextboxHasFocus() {
+            textbox.Focus();
+            Assert.That(textbox.IsCueVisible, Is.False);
+        }
+
+        [Test]
+        public void CueIsVisibleAgainWhenLostFocus() {
+            var otherTextbox = new TextBox();
+
+            textbox.Focus();
+
+            var scope = FocusManager.GetFocusScope(textbox);
+            FocusManager.SetFocusedElement(scope, otherTextbox);
+
+            Assert.That(textbox.IsCueVisible, Is.True);
+        }
     }
+
 }

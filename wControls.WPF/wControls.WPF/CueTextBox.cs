@@ -31,7 +31,29 @@
         /// <param name="e">The arguments that are associated with the <see cref="E:System.Windows.Controls.Primitives.TextBoxBase.TextChanged"/> event.</param>
         protected override void OnTextChanged(TextChangedEventArgs e) {
             base.OnTextChanged(e);
-            IsCueVisible = Text.Length == 0;
+            CheckIfCueShouldBeVisible();
+        }
+
+        /// <summary>
+        /// Invoked whenever an unhandled <see cref="E:System.Windows.UIElement.GotFocus"/> event reaches this element in its route.
+        /// </summary>
+        /// <param name="e">The <see cref="T:System.Windows.RoutedEventArgs"/> that contains the event data.</param>
+        protected override void OnGotFocus(RoutedEventArgs e) {
+            base.OnGotFocus(e);
+            CheckIfCueShouldBeVisible();
+        }
+
+        /// <summary>
+        /// Raises the <see cref="E:System.Windows.UIElement.LostFocus"/> event (using the provided arguments).
+        /// </summary>
+        /// <param name="e">Provides data about the event.</param>
+        protected override void OnLostFocus(RoutedEventArgs e) {
+            base.OnLostFocus(e);
+            CheckIfCueShouldBeVisible();
+        }
+
+        private void CheckIfCueShouldBeVisible() {
+            IsCueVisible = Text.Length == 0 && !IsFocused;
         }
     }
 }
