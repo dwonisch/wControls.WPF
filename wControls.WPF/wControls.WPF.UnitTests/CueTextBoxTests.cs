@@ -1,10 +1,9 @@
-﻿namespace wControls.WPF.UnitTests {
-    using System.Threading;
-    using System.Windows;
-    using System.Windows.Controls;
-    using System.Windows.Input;
-    using NUnit.Framework;
+﻿using System.Windows.Controls;
+using System.Windows.Input;
+using NUnit.Framework;
 
+namespace wControls.WPF.UnitTests {
+    
     [TestFixture, RequiresSTA]
     public class CueTextBoxTests {
         private CueTextBox textbox;

@@ -21,19 +21,36 @@
     /// </summary>
     public partial class MainWindow : Window, INotifyPropertyChanged {
         private double scale;
+        private string selectedFile;
+        private readonly ICommand openFileCommand;
+        private readonly ICommand openFileWithFilterCommand;
+
+        private ICommand CreateOpenFileCommand(string filter) {
+            var service = new OpenFileService();
+            service.FileOpened += (sender, args) => SelectedFile = args.File;
+            return new Command<string>(file => service.OpenFileDialog(file, filter));
+        }
 
         public MainWindow() {
             Scale = 1;
-         
+            openFileCommand = CreateOpenFileCommand(null);
+            openFileWithFilterCommand = CreateOpenFileCommand("Word Document|*.docx");
             InitializeComponent();
-
         }
 
         public double Scale {
             get { return scale; }
             set {
                 scale = value; 
-                OnPropertyChanged("Scale");
+                OnPropertyChanged();
+            }
+        }
+
+        public string SelectedFile {
+            get { return selectedFile; }
+            set {
+                selectedFile = value;
+                OnPropertyChanged();
             }
         }
 
@@ -44,6 +61,14 @@
             if (handler != null) {
                 handler(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        public ICommand OpenFile {
+            get { return openFileCommand; }
+        }
+
+        public ICommand OpenFileWithFilter {
+            get { return openFileWithFilterCommand; }
         }
     }
 }

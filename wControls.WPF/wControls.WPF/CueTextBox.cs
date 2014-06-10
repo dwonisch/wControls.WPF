@@ -1,7 +1,7 @@
-﻿namespace wControls.WPF {
-    using System;
-    using System.Windows;
-    using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
+
+namespace wControls.WPF {
 
     public class CueTextBox : TextBox {
         static CueTextBox() {
