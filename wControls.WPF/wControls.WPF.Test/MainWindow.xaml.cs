@@ -22,6 +22,7 @@
     public partial class MainWindow : Window, INotifyPropertyChanged {
         private double scale;
         private string selectedFile;
+        private string password;
         private readonly ICommand openFileCommand;
         private readonly ICommand openFileWithFilterCommand;
 
@@ -50,6 +51,14 @@
             get { return selectedFile; }
             set {
                 selectedFile = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Password {
+            get { return password; }
+            set {
+                password = value;
                 OnPropertyChanged();
             }
         }

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>wControls.WPF</id>
-        <version>1.1.0</version>
+        <version>1.2.0</version>
         <title>wControls WPF User Controls</title>
         <authors>daniel.wonisch</authors>
         <owners>Daniel Wonisch</owners>
@@ -10,7 +10,8 @@
         <description>A collection of some WPF user controls.</description>
         <releaseNotes>
           v1.0.0 - Added CueTextBox that shows a cue when empty
-          v1.1.0 - Added OpenFileService            
+          v1.1.0 - Added OpenFileService
+          v1.2.0 - Added PasswordBox Attached Binding Properties
         </releaseNotes>
     </metadata>
     <files>

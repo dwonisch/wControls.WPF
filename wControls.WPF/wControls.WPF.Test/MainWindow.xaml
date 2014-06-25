@@ -47,6 +47,11 @@
                 <Button Command="{Binding OpenFileWithFilter}" CommandParameter="{Binding SelectedFile}">Open File with Filter</Button>
                 <Wpf:CueTextBox Text="{Binding SelectedFile}" Cue="Select a file"></Wpf:CueTextBox>
             </StackPanel>
+            <StackPanel  Style="{StaticResource testContainer}">
+                <Label>Password:</Label>
+                <TextBox Text="{Binding Password}"/>
+                <PasswordBox Wpf:PasswordBoxBinding.BoundPassword="{Binding Path=Password, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" ></PasswordBox>
+            </StackPanel>
         </StackPanel>
     </StackPanel>
 </Window>

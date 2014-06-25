@@ -58,6 +58,7 @@
     <Compile Include="Command.cs" />
     <Compile Include="IOService.cs" />
     <Compile Include="OpenFileService.cs" />
+    <Compile Include="PasswordBoxBinding.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -82,6 +83,9 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="wControls.WPF.nuspec">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
